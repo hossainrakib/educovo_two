@@ -1,0 +1,145 @@
+.hero-area{
+    .hero{
+        height: 975px;
+
+        @include respond-between(md, lg) {
+  
+        }
+        @include respond-between(sm, md) {
+          
+        }
+        @include respond-between(xs, sm) {
+          
+        }
+        @include respond-below(md) {
+          height: auto;
+        }
+        .slick-list , .slick-track {
+            height: 100%;
+
+
+            .slick-track{
+
+            }
+        }
+        .slick-arrow{
+            @include size(42, 42);
+            background-color: $main-color;
+            border-radius: 50%;
+            color: $white-color;
+            border: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 15px !important;
+            z-index: 99;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .5s;
+
+            &.slick-prev{
+                left: 15px;
+            }
+        }
+        &:hover{
+            .slick-arrow{
+                right: 42px !important;
+                visibility: visible;
+                opacity: 1;
+    
+                &.slick-prev{
+                    left: 42px;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        } 
+
+        &__single{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            @include respond-between(md, lg) {
+  
+            }
+            @include respond-between(sm, md) {
+              
+            }
+            @include respond-between(xs, sm) {
+              
+            }
+            @include respond-below(md) {
+              height: auto !important;
+            }
+        }
+        &__content{
+            max-width: 830px;
+            margin: 0 auto;
+            padding-top: 250px;
+
+            @include respond-between(md, lg) {
+  
+            }
+            @include respond-between(sm, md) {
+                 padding: 200px 35px;
+              
+            }
+            @include respond-between(xs, sm) {
+            }
+            @include respond-below(sm) {
+                padding: 175px 15px 100px
+              
+            }
+            &__subtitle{
+                h4{
+                    @include fonts($main-font, 22, 500, $main-color, uppercase, 30px);
+                    
+
+                    @include respond-between(md, lg) {
+  
+                    }
+                    @include respond-between(sm, md) {
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        @include texts(20, 30)
+                      
+                    }
+                    @include respond-below(xs) {
+                        @include texts(16, 25)
+                      
+                    }
+                }
+            }
+            &__title{
+                h2{
+                    @include fonts($second-font, 70, 700, $white-color, capitalize, 80px);
+                         margin: 22px 0 65px 0;
+
+                    @include respond-between(md, lg) {
+  
+                    }
+                    @include respond-between(sm, md) {
+                      @include texts(60, 78)
+                    }
+                    @include respond-between(xs, sm) {
+                        @include texts(48, 62);
+                        margin: 10px 0 50px 0;
+                      
+                    }
+                    @include respond-below(xs) {
+                        @include texts(27, 33);
+                        margin: 10px 0 30px 0;
+                    }
+
+                }
+            }
+            &__link{
+                a{
+
+                }
+            }
+        }
+    }
+}

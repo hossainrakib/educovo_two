@@ -1,0 +1,152 @@
+.blog-area{
+    .section__title{
+        h2{
+            color: $blog-title !important;
+
+        }
+    }
+    .blog{
+        &-active{
+            .slick-list{
+                padding-bottom: 10px;
+                margin: 0 -15px;
+            }
+        }
+        &__single{
+            &__item{
+                transition: all .4s ease;
+                margin: 0 15px;
+                &:hover {
+                    transform: translateY(-10px);
+                }
+            }
+        }
+        &__image{
+            img{
+
+            }
+        }
+        &__content{
+            padding: 40px 35px 16px;
+            box-shadow: 0px 0px 30px 0px rgba(0 , 0 , 0 , .05);
+
+            @include respond-below(xs) {
+                padding: 28px 15px 15px;
+  
+            }
+            @include respond-below(xs) {
+  
+            }
+     
+            
+        }
+        &__meta{
+            ul{
+                li{
+                    i{
+                        font-size: 14px;
+                        line-height: 14px;
+                        color: $main-color;
+                        margin-right: 3px
+                    }
+                    span{
+                        @include fonts($main-font, 15, 400, $rating-color, inherit, 26px);
+                        margin-right: 20px
+                    }
+                }
+            }
+        }
+        &__title{
+            h2{
+                a{
+                    @include fonts($second-font, 24, 700, $title-color, capitalize, 34px);
+                    transition: all .3s ease;
+                    margin: 10px 0 15px 0;
+
+                    @include respond-between(md, lg) {
+                        @include texts(19, 30);
+                    }
+                    @include respond-between(sm, md) {
+                        @include texts(20, 34);
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        @include texts(23, 34);
+                      
+                    }
+                    @include respond-below(xs) {
+                        @include texts(18, 28);
+                         margin: 7px 0 7px 0;
+
+                      
+                    }
+                    
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+        &__disc{
+            p{
+                @include fonts($main-font, 15, 400, $rating-color, inherit, 26px);
+
+                @include respond-between(xs, sm) {
+                  
+                }
+                @include respond-below(xs) {
+                  
+                }
+            }
+        }
+        &__cat{
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid $border-color;
+
+            @include respond-below(xs) {
+                margin-top: 15px;
+                padding-top: 15px;
+            }
+            ul{
+                li{
+                    .title{
+                        a{
+                            @include fonts($main-font, 14, 400, $rating-color, capitalize, 26px);
+                            transition: all .3s ease;
+
+                            &:hover {
+                                color: $main-color;
+                            }
+                        }
+                    }
+
+                    i{
+                        margin-right: 3px;
+                        color: $main-color;
+                    }
+
+                }
+            }
+        }
+        &__link{
+            a{
+                @include fonts($main-font, 15, 400, $rating-color, capitalize, 26px);
+                transition: all .3s ease;
+                &:hover {
+                    color: $main-color;
+                    i{
+                        color: $main-color !important;
+                    }
+                }
+
+                i{
+                    font-size: 15px;
+                    line-height: 26px;
+                    color: $rating-color !important;
+                }
+            }
+        }
+    }
+}

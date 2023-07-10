@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "flaticon";
+  src: url("./flaticon.ttf?1c5b8294dfc3b2c62a911134a3da530d") format("truetype"), url("./flaticon.woff?1c5b8294dfc3b2c62a911134a3da530d") format("woff"), url("./flaticon.woff2?1c5b8294dfc3b2c62a911134a3da530d") format("woff2"), url("./flaticon.eot?1c5b8294dfc3b2c62a911134a3da530d#iefix") format("embedded-opentype"), url("./flaticon.svg?1c5b8294dfc3b2c62a911134a3da530d#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+  font-family: flaticon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-location:before {
+  content: "";
+}
+
+.flaticon-phone-call:before {
+  content: "";
+}
+
+.flaticon-email:before {
+  content: "";
+}
+/*# sourceMappingURL=flaticon.css.map */

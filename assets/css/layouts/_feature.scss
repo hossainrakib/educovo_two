@@ -1,0 +1,94 @@
+.feature-area{
+    bottom: 100px;
+
+    @include respond-between(md, lg) {
+  
+    }
+    @include respond-between(sm, md) {
+  
+    }
+    @include respond-between(xs, sm) {
+      
+    }
+    @include respond-below(md) {
+        padding-top: 70px;
+        overflow: hidden;
+        position: static !important;
+    }
+    .feature{
+            padding: 25px 40px;
+            background-color: $feature-bg;
+            transition: all .3s ease;
+            border-radius: 5px;
+
+            @include respond-between(lg, xl) {
+                padding: 25px 30px;
+  
+            }
+            @include respond-between(md, lg) {
+                padding: 20px 15px;
+
+            }
+            @include respond-between(xs, sm) {
+              
+            }
+            @include respond-below(md) {
+                padding: 25px 20px;
+              
+            }
+        &__icon{
+            width: 50px;
+            margin-right: 35px;
+                
+            @include respond-between(lg, xl) {
+                margin-right: 25px;
+        
+            }
+            @include respond-between(md, lg) {
+                margin-right: 15px;
+        
+            }
+            @include respond-between(sm, md) {
+                 margin-bottom: 20px;
+            }
+            @include respond-between(xs, sm) {
+                margin-bottom: 17px;
+            
+            }
+            @include respond-below(xs) {
+                margin-bottom: 15px;
+            
+            }
+            img{
+                height: auto;
+            }
+        }
+        &__content{
+            &__title{
+                h2{
+                    @include fonts($second-font, 22, 700, $white-color, inherit, 26px);
+                    margin-bottom: 5px;
+
+                    @include respond-between(md, lg) {
+                       font-size: 19px
+        
+                    }
+                }
+            }
+            &__disc{
+                p{
+                    @include fonts($main-font, 16, 400, $white-color, inherit, 29px);
+
+                    @include respond-between(md, lg) {
+                        font-size: 14px;
+                
+                    }
+
+                }
+            }
+        }
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+}

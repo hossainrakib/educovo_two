@@ -1,0 +1,119 @@
+.courses-area{
+    background-color: $event-bg;
+    .courses{
+        &__item{
+            @extend .div-margin;
+            &:hover {
+                & .courses__image{
+
+                    a{
+                        img{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+        &__image{
+            a{
+                img{
+                    transition: all .5s ease;
+
+                }
+            }
+        }
+        &__content{
+            padding: 32px 35px 35px 35px;
+            background-color: $white-bg;
+
+            @include respond-between(md, lg) {
+  
+            }
+            @include respond-between(sm, md) {
+            padding: 32px 28px 35px 28px;
+              
+            }
+            @include respond-between(xs, sm) {
+              
+            }
+            @include respond-below(xs) {
+             padding: 30px 5px 16px 5px;
+              
+            }
+        }
+        &__price{
+            top: 20px;
+            right: 20px;
+            span.price{
+                @include fonts($main-font, 15, 500, $white-color, capitalize, 26px);
+                padding: 3px 15px;
+                background-color: $main-color;
+                border-radius: 5px;
+                display: inline-block;
+            }
+        }
+        &__rating{
+            ul{
+                li{
+                    font-size: 15px;
+                    line-height: 26px;
+                    i{
+                        color: $star-color;
+                        line-height: 15px;
+                    }
+                    span{
+                        color: $rating-color;
+                    }
+                }
+            }
+        }
+        &__title{
+            h2{
+                a{
+                    @include fonts($second-font, 22, 700, $title-color, capitalize, 30px);
+                    transition: all .3s ease;
+                    margin: 10px 0 25px 0;
+
+                    @include respond-below(xs) {
+                        margin: 10px 0 15px 0;
+  
+                    }
+                    
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+        &__user{
+            padding-top: 25px;
+            border-top: 1px solid $border-color;
+
+            @include respond-below(xs) {
+                padding-top: 15px;
+  
+            }
+            
+            ul{
+                
+            }
+            &__item{
+
+            }
+            &__icon{
+                i{
+                    @include texts(14, 14);
+                    color: $main-color;
+
+                }
+            }
+            &__count{
+                p{
+                     @include fonts($main-font, 14, 400, $user-counte, capitalize, 26px);
+                     margin-left: 10px;
+                }
+            }
+        }
+    }
+}

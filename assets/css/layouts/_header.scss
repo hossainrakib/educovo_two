@@ -1,0 +1,533 @@
+.header-area{
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    background-color: transparent;
+    
+    @include respond-between(md, lg) {
+  
+    }
+    @include respond-between(sm, md) {
+      
+    }
+    @include respond-between(xs, sm) {
+      
+    }
+    @include respond-below(xs) {
+      
+    }
+    .logo{
+        @include respond-below(md) {
+            height: 90px;
+        }
+        @include respond-below(xs) {
+            height: 70px;
+        }
+        a{
+            @include respond-between(md, lg) {
+  
+            }
+            @include respond-between(xs, md) {
+             
+            }
+            @include respond-between(xs, sm) {
+              
+            }
+            @include respond-below(md) {
+                width: 209px;
+            }
+            img{
+                height: auto;
+            }
+            img.scroll-logo{
+               display: none; 
+            }
+            
+        }
+    }
+    .main-menu{
+        .nav-bar{
+            li.item{
+                position: relative;
+                &:last-child{
+                    margin-right: 0;
+                }
+                margin-right: 45px;
+                a.link{
+                    @include fonts($main-font, 15, 500, $white-color, uppercase, 120px);
+                    padding-right: 12px;
+                    margin-right: -12px;
+                    @extend .transition;
+                    position: relative;
+
+                    @include respond-between(md, lg) {
+                        font-size: 14px;
+                    }
+                    @include respond-between(sm, md) {
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      
+                    }
+                    @include respond-below(xs) {
+                      
+                    }
+                    &::after{
+                        position: absolute;
+                        content: '+';
+                        left: auto;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 0;
+                        animation-delay: .2s;
+                        @extend .transition;
+                    }
+                    
+                    &::before{
+                        position: absolute;
+                        content: '-';
+                        left: auto;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 0;
+                        animation-delay: .2s;
+                        @extend .transition;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                }
+                .mega-menu{
+                    top: 100%;
+                    right: 0;
+                    background-color: $white-color;
+                    @extend .transition;
+                    transform: scaleY(0);
+                    transform-origin: top;
+                    opacity: 0;
+                    visibility: hidden;
+                    pointer-events: none;
+                    box-shadow: 0 0 20px $slicky-shadow;
+
+          
+      
+                }
+                &:hover > {
+                    .mega-menu{
+                        transform: scaleY(1) !important;
+                        opacity: 1;
+                        visibility: visible;
+                        transition: .5s ease !important;
+                        pointer-events: visible;
+                    }
+                } 
+                .sub-menu{
+                    padding: 30px 0;
+                    min-width: 250px;
+                    box-shadow: 0 5px 0 0 $main-color;
+                    top: 100%;
+                    left: 0;
+                    background-color: $white-color;
+                    @extend .transition;
+                    transform: scaleY(0);
+                    transform-origin: top;
+                    opacity: 0;
+                    visibility: hidden;
+                    pointer-events: none;
+                    box-shadow: 0 0 20px $menu-shadow;
+
+
+                    &__item{
+                        position: relative;
+                        a.links{
+                            @include fonts($main-font, 15, 400, $sub-menu-color, capitalize, 26px);
+                            padding: 10px 30px;
+                            display: block;
+                        }
+                        &:hover > {
+                            a{
+                                color: $main-color;
+                            }
+                        }
+                        &.active > {
+                            a{
+                                color: $main-color;
+                            }
+                        }
+                        .sub-menu{
+                            background-color: $white-color;
+                            top: 0;
+                            left: -100%;
+                            transition: 0s ease !important;
+                            transform: scaleY(0) !important;
+                            transform-origin: top !important;
+                            opacity: 0;
+                            visibility: hidden;
+                            pointer-events: none;
+
+                    
+                        }
+                                
+                        &:hover > {
+                            .sub-menu{
+                                transform: scaleY(1) !important;
+                                opacity: 1;
+                                visibility: visible;
+                                transition: .5s ease !important;
+                                pointer-events: visible;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    & a{
+                        color: $main-color;
+                        &::after{
+                            display: none;
+                        }
+                        &::before{
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+                &.active{
+                    a{
+                        color: $main-color;
+                    }
+                }
+                &:hover {
+                    .sub-menu{
+                        transform: scaleY(1);
+                        opacity: 1;
+                        visibility: visible;
+                        pointer-events: visible;
+                    }
+                }
+            }
+        }
+    }
+    .user{
+        &__info{
+            &__item{
+                margin-right: 15px;
+                padding: 44px 0;
+                > a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 32px;
+                    width: 32px;
+                    border-radius: 50%;
+                    border: 1px solid $white-color;
+
+                    i{
+                        font-size: 15px;
+                        color: $white-color;
+                        line-height: 29px;
+                    } 
+                    &:hover {
+                        i{
+                            color: $main-color !important;
+                        }
+                    }  
+                }
+                &:hover {
+                    cursor: pointer;
+                    i{
+                        color: $main-color;
+                    }
+                    a.on-hover{
+                        i{
+                            color: $white-color;
+                        }
+                    }
+                }
+                &.on-hover{
+                    &:hover {
+                        cursor: context-menu !important;
+                    }
+                }
+                button.bars{
+                    margin: -6px 0;
+                    margin-left: 10px;
+                    span{
+                        width: 30px;
+                        height: 2px;
+                        background-color: $white-color;
+                        display: block;
+                        margin: 6px 0;
+                        @extend .transition;
+                        
+                    }
+                    &:hover {
+                        span{
+                            background-color: $main-color;
+                        }
+                    }
+                }
+                .woocommarce-card{
+                    top: 200%;
+                    visibility: hidden;
+                    opacity: 0;
+                    pointer-events: none;
+                    @extend .transition;
+                    background-color: $main-color;
+                    width: 270px;
+                    padding: 30px 20px;
+                    &__wrapper{
+                        &__single{
+                            .product{
+                                &__icon{
+                                    @include size(18, 18);
+                                    border: 1px solid $white-color;
+                                    border-radius: 50%;
+                                    i{
+                                        font-size: 12px;
+                                        line-height: 18px;
+                                        color: $white-color;
+                                        font-weight: 500;
+                                    }
+                                    &:hover {
+                                        & i {
+                                            color: $card-hover-color;
+                                        }
+                                    }
+                                }
+                                &__info{
+                                    padding: 0 25px;
+                                    .title{
+                                        a{
+                                            display: block;
+                                            @include fonts($main-font, 15, 700, $white-color, capitalize, 26px);
+                                            @extend .transition;
+
+                                            &:hover {
+                                                color: $card-hover-color;
+                                            }
+                                        }
+                                    }
+                                    .price{
+                                        h4{
+                                            @include fonts($main-font, 15, 400, $price-color, capitalize, 26px);
+                                        }
+                                    }
+                                }
+                                &__image{
+                                    width: 56px;
+                                    img{
+
+                                    }
+                                }
+                            }
+                        }
+                        .total-price{
+                            p{
+                                @include fonts($main-font, 15, 400, $price-color, capitalize, 26px);
+                                margin: 20px 0;
+                            }
+                        }
+                        .card-btn{
+                            margin: 0 -5px;
+                            .btn-card{
+                                margin: 0 5px;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    & .woocommarce-card{
+                         top: 100%;
+                         right: 0;
+                         visibility: visible;
+                         opacity: 1;
+                         pointer-events: visible;
+                    }
+                }
+            }
+        }
+    }
+    &.fixed-top{
+        transition: all .3s ease;
+        background-color: $white-bg;
+        position: fixed;
+        box-shadow: 0px 0px 4px $slicky-shadow;
+
+        @include respond-between(md, lg) {
+  
+        }
+        @include respond-between(sm, md) {
+        }
+        @include respond-between(xs, sm) {
+          
+        }
+        //question
+        @include respond-below(md) {
+            background-color: $sticky-bg !important;
+             position: absolute;    
+
+        }
+        .main-header{
+
+        }
+        .logo{
+            height: 70px !important;
+            @include respond-below(md) {
+                
+            }
+            a{
+                img.scroll-logo{
+                   display: block; 
+                }
+                img.main-logo{
+                    display: none;
+                }
+            }
+        }
+        .main-menu{
+            .nav-bar{
+                li.item{
+                    a.link{
+                        line-height: 90px;
+                        color: $sub-menu-color;
+                        padding-right: 18px;
+                    }
+                    
+                    &.active > {
+                        a{
+                            color: $main-color;
+                        }
+                    }
+                    &:hover > a{
+                        color: $main-color;
+
+                    }
+                }
+            }
+        }
+        .user{
+            &__info{
+                &__item{
+                    padding: 29px 0;
+                    > a{
+                        border: 1px solid $user-bor-color;
+    
+                        i{
+                            color: $sub-menu-color;
+                        } 
+                        &:hover {
+                            i{
+                                color: $main-color !important;
+                            }
+                        }  
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        i{
+                            color: $main-color;
+                        }
+                        a.on-hover{
+                            i{
+                                color: $sub-menu-color;
+                            }
+                        }
+                    }
+                    &.on-hover{
+                        &:hover {
+                            cursor: context-menu !important;
+                            color: $main-color;
+                        }
+                    }
+                    button.bars{
+                        span{
+                            background-color: $sub-menu-color;
+                        }
+                        &:hover {
+                            span{
+                                background-color: $main-color;
+                            }
+                        }
+                    }
+                    .woocommarce-card{
+                        top: 200%;
+                        visibility: hidden;
+                        opacity: 0;
+                        pointer-events: none;
+                        @extend .transition;
+                        background-color: $main-color;
+                        width: 270px;
+                        padding: 30px 20px;
+                        &__wrapper{
+                            &__single{
+                                .product{
+                                    &__icon{
+                                        @include size(18, 18);
+                                        border: 1px solid $white-color;
+                                        border-radius: 50%;
+                                        i{
+                                            font-size: 12px;
+                                            line-height: 18px;
+                                            color: $white-color;
+                                            font-weight: 500;
+                                        }
+                                        &:hover {
+                                            & i {
+                                                color: $card-hover-color;
+                                            }
+                                        }
+                                    }
+                                    &__info{
+                                        padding: 0 25px;
+                                        .title{
+                                            a{
+                                                display: block;
+                                                @include fonts($main-font, 15, 700, $white-color, capitalize, 26px);
+                                                @extend .transition;
+    
+                                                &:hover {
+                                                    color: $card-hover-color;
+                                                }
+                                            }
+                                        }
+                                        .price{
+                                            h4{
+                                                @include fonts($main-font, 15, 400, $price-color, capitalize, 26px);
+                                            }
+                                        }
+                                    }
+                                    &__image{
+                                        width: 56px;
+                                        img{
+    
+                                        }
+                                    }
+                                }
+                            }
+                            .total-price{
+                                p{
+                                    @include fonts($main-font, 15, 400, $price-color, capitalize, 26px);
+                                    margin: 20px 0;
+                                }
+                            }
+                            .card-btn{
+                                margin: 0 -5px;
+                                .btn-card{
+                                    margin: 0 5px;
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        & .woocommarce-card{
+                             top: 100%;
+                             right: 0;
+                             visibility: visible;
+                             opacity: 1;
+                             pointer-events: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

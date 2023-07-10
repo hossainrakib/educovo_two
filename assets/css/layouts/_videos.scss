@@ -1,0 +1,214 @@
+.videos-area{
+    .faq-content{
+        padding: 60px 50px 70px;
+        @include respond-below(md) {
+             padding: 33px 40px 40px;
+            
+        }
+        @include respond-below(xs) {
+            padding: 30px 0px 30px;
+  
+        }
+        
+        background-color: $event-bg;
+        &__title{
+            h2{
+                @include fonts($second-font, 36, 700, $sub-menu-color, capitalize, 46px);
+                margin-bottom: 15px;
+
+                @include respond-between(md, lg) {
+  
+                }
+                @include respond-between(sm, md) {
+                }
+                @include respond-between(xs, sm) {
+                  
+                }
+                @include respond-below(md) {
+                    @include texts(30, 40)
+                  
+                }
+                @include respond-below(xs) {
+                    @include texts(22, 32)
+                  
+                }
+                
+            }
+        }
+        .card{
+            border: none;
+            margin-top: 25px;
+            &__heading{
+                a{
+                    @include fonts($main-font, 16, 600, $sub-menu-color, inherit, 65px);
+                    background-color: $white-bg;
+                    position: relative;
+                    padding: 0 60px;
+                    display: block;
+
+                    @include respond-between(md, lg) {
+                        padding: 0 10px 0 40px;
+                        font-size: 15px;
+                    }
+                    @include respond-between(sm, md) {
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        padding: 0 40px 0 40px;
+                      
+                    }
+                    @include respond-below(xs) {
+                        padding: 13px 10px 13px 30px;
+                        @include texts(14, 24);
+                      
+                    }
+
+                    &::after{
+                        position: absolute;
+                        content: "\f0a2";
+                        left: 24px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-family: 'FontAwesome';
+                        
+                        @include respond-between(md, lg) {
+                         
+                        }
+                        @include respond-between(sm, md) {
+                          
+                        }
+                        @include respond-between(xs, sm) {
+                          
+                        }
+                        @include respond-below(xs) {
+                            left: 10px;
+                          
+                        }
+                    }
+                    //f1f7 
+                }
+            }
+            &__body{
+                
+                display: none;
+                p{
+                    @include fonts($main-font, 15, 400, $rating-color, inherit, 25px);
+                    padding: 15px 14px;
+                }
+            }
+            &.active{
+                transition: all .4s ease;
+                .card{
+                    &__heading{
+                        a{
+                            background-color: $main-color;
+                            color: $white-bg;
+
+                            &::after{
+                                content: "\f1f7";
+
+                            }
+                        }
+                    }
+                    &__body{
+                    }
+                }
+            }
+        }
+    }
+    .videos{
+        @include respond-below(md) {
+          height: auto !important;
+
+        }
+        &__image{
+            background-image: url(../../img/viideo/1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            z-index: 0;
+            min-height: 615px;
+
+            @include respond-between(sm, md) {
+                background-size: contain;
+                min-height: 360px;
+                margin-top: 70px;
+            }
+            @include respond-between(xs, sm) {
+              margin-top: 50px;
+              min-height: 290px;
+
+            }
+            
+            @include respond-below(xs) {
+              margin-top: 30px;
+              min-height: 250px;
+            }
+            @include respond-below(md) {
+                background-size: contain;
+                position: static;
+
+            }
+        }
+        &__popup{
+            height: 75px;
+            width: 75px;
+            background-color: $white-bg;
+            border-radius: 50%;
+            position: relative;
+
+            @include respond-below(xs) {
+            height: 50px;
+            width: 50px;
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color:$white-bg;
+                z-index: -1;
+                animation: popup 1.5s ease-in-out 0s infinite;
+                visibility: hidden;
+                opacity: 0;
+                pointer-events: none;
+            }
+            i{
+                color: $main-color;
+                font-size: 30px;
+
+                @include respond-below(xs) {
+                    font-size: 16px;
+  
+                }
+            }
+            &:hover {
+                &::before{
+                    visibility: visible;
+                    opacity: 1;
+                    pointer-events: visible;
+                }
+            }
+        }
+    }
+}
+
+@keyframes popup {
+    0%{
+        height: 70px;
+        width: 70px;
+        background-color: rgba(250, 250, 250, 1);
+    }
+    100%{
+        width: 170px;
+        background-color: rgba(250, 250, 250, .2);
+        height: 170px;
+    }
+}

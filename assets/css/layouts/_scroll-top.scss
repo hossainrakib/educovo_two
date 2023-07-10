@@ -1,0 +1,52 @@
+.scroll-top-area{
+    #scroll{
+        display: none;
+    }
+    .scroll-top{
+        display: block !important;
+
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+            width: 45px;
+            background-color: $main-color;
+            border-radius: 50%;
+            color: $white-color;
+            font-size: 25px;
+            position: fixed;
+            bottom: 45px;
+            right: 50px;
+            
+            @include respond-between(md, lg) {
+            
+
+            }
+            @include respond-between(sm, md) {
+                height: 40px;
+                width: 40px;
+                right: 45px;
+                font-size: 22px;
+            }
+            @include respond-between(xs, sm) {
+                height: 35px;
+                width: 35px;
+                right: 30px;
+                font-size: 20px;
+
+            }
+            @include respond-below(xs) {
+                font-size: 20px;
+                height: 30px;
+                width: 30px;
+                right: 10px;
+            }
+            
+            i{
+                font-weight: 800;
+                
+            }
+        }
+    }
+}

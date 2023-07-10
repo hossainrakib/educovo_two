@@ -1,0 +1,152 @@
+.testimonials-area{
+    background-image: url(../../img/testimonials/bg/main-home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .section{
+        @include respond-below(md) {
+            margin-bottom: 0;
+        }
+        
+    }
+    .testimonials{
+        &-active{
+            .slick-list{
+                margin: 0 -15px;
+            }
+            .slick-dots{
+                display: flex;
+                justify-content: center;
+                margin-top: 45px;
+                li{
+                    height: 10px;
+                    width: 25px;
+                    background-color: $main-color;
+                    margin: 0 5px;
+                    border-radius: 30px;
+                    transition: .3s ease;
+                    opacity: .7;
+
+                    &.slick-active, &:hover{
+                        opacity: 1;
+                        width: 40px;
+                        cursor: pointer;
+                    }
+           
+                    button{
+                        display: none;
+                    }
+                }
+            }
+        }
+        &__wrapper{
+            margin-top: 5px;
+        }
+        .testimonials_item{
+            
+        }
+        &__item{
+            margin: 0 15px;
+        }
+        &__icon{
+            .image{
+                img{
+                    width: 66px;
+                    margin-bottom: 25px;
+
+                    @include respond-below(xs) {
+                        margin-bottom: 14px;
+                        width: 46px;
+  
+                    }
+                }
+            }
+        }
+        &__author{
+            &__content{
+                padding: 50px 15px 105px 15px;
+                background-color: $author-bg;
+
+                @include respond-between(md, lg) {
+  
+                }
+                @include respond-between(sm, md) {
+                    padding: 40px 15px 80px 15px;
+                  
+                }
+                @include respond-between(xs, sm) {
+                    padding: 60px 30px;
+                }
+                @include respond-below(xs) {
+                    padding: 20px 20px 50px;
+                  
+                }
+                
+            }
+            &__disc{
+                p{
+                    @include fonts($main-font, 23, 500, $white-color, inherit, 33px);
+                    font-style: italic;
+                    padding: 0 40px;
+
+                    @include respond-between(md, lg) {
+  
+                    }
+                    @include respond-between(sm, md) {
+                        padding: 0px;
+                        @include texts(20, 30);
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        padding: 0px;
+                        @include texts(18, 33);
+                      
+                    }
+                    @include respond-below(xs) {
+                        padding: 0px;
+                        @include texts(16, 30);
+
+                      
+                    }
+                    
+                }
+            }
+            &__profile{
+                bottom: -70px;
+                left: 50%;
+                .image{
+                    img{
+    
+                    }
+                }
+            }
+            &__info{
+                h2{
+                    @include fonts($main-font, 20, 700, $white-color, capitalize, 46px);
+                    margin-top: 40px;
+
+                    @include respond-between(md, lg) {
+  
+                    }
+                    @include respond-between(sm, md) {
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      
+                    }
+                    @include respond-below(xs) {
+                      
+                    }
+                    
+                }
+            }
+            &__skil{
+                h4{
+                    @include fonts($main-font, 16, 400, $white-color, capitalize, 26px);
+
+                }
+            }
+        }
+    }
+}

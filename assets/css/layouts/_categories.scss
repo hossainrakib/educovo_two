@@ -1,0 +1,81 @@
+.categories-area{
+    .categories{
+
+        &__item{
+            @extend .div-margin;
+            transition: all .3s ease;
+            &::before {
+                @include after(100%, 100%, 0, 0, 0, 0);
+                background: linear-gradient(bottom, $black-bg 0%, rgba(0, 0, 0, 0) 50%);
+            }
+            &:hover{
+                transform: translateY(-10px);
+            }
+        }
+        &__image{
+            img{
+
+            }
+        }
+        &__action{
+
+        }
+        &__wrapper{
+            padding: 30px 40px;
+            @include respond-below(xs) {
+                padding: 30px 15px;
+            }
+            
+        }
+        &__icon{
+            width: 42px;
+            margin-right: 20px;
+            img{
+
+            }
+        }
+        &__content{
+            
+        }
+        &__title{
+            h3{
+                @include fonts($second-font, 22, 700, $white-color, capitalize, 32px);
+                margin-bottom: 5px;
+                @extend .transition;
+
+                @include respond-below(xs) {
+                    font-size: 17px;
+                }
+                
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+        &__disc{
+            p{
+                @include fonts($second-font, 16, 400, $white-color, capitalize, 22px);
+
+            }
+        }
+        &__link{
+            margin-top: 45px;
+            @extend .div-margin;
+
+            @include respond-between(sm, md) {
+                 margin-top: 40px;
+
+            }
+            @include respond-between(xs, sm) {
+                margin-top: 35px;
+
+            }
+            @include respond-below(xs) {
+                margin-top: 25px;
+
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,255 @@
+//text-color
+$title-color:#101010;
+$white-color:#fff;
+$main-color:#ff5421;
+$sub-menu-color:#111111;
+$card-hover-color:#273c66;
+$price-color:#f3f8f9;
+$btn-card:#111;
+$btn-card-hover:#f2f2f2;
+$btn-border:#21a7d0;
+$rating-color:#505050;
+$star-color:#fcb903;
+$user-counte:#363636;
+$border-color:#f4f0f0;
+$copy-right-color:#f3f8f9;
+$footer-menu-color:#e8e8e8;
+$user-bor-color:#eee;
+$mobile-title-color:#394459;
+$mobile-border-color:#131313;
+$blog-title:#031a3d;
+$slicky-shadow:rgba(0, 0, 0, 0.2);
+$manu-shadow:rgba(0, 0, 0, 0.15);
+
+//backgroutd-color
+
+$service-bg:#fff;
+$black-bg:#000;
+$btn-bg:#171F32;
+$feature-bg:#171F32;
+$event-bg:#f9f8f8;
+$white-bg: #fff;
+$author-bg: #171F3296;
+$footer-bg:#151515;
+$mobile-arrow-bg: #ddd;
+$sticky-bg:#bbb847f2;
+
+
+//section-padding
+
+.section-padding{
+    padding: 100px 0px;
+
+    @include respond-between(md, lg) {
+         padding: 90px 0px;
+    }
+    @include respond-between(sm, md) {
+         padding: 70px 0px;
+    }
+    @include respond-between(xs, sm) {
+         padding: 50px 0px;
+    }
+    @include respond-below(xs) {
+          padding: 35px 0px;
+    }
+
+}
+.speace-t-70 {
+    padding-top: 70px;
+
+    @include respond-between(md, lg) {
+        padding-top: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 30px;
+    }
+    @include respond-below(xs) {
+        padding-top: 26px;
+    }
+}
+.speace-b-70 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 30px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 26px;
+    }
+}
+.speace-t-60 {
+    padding-top: 60px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-b-60 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+.speace-t-50 {
+    padding-top: 50px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+.speace-b-50 {
+    padding-bottom: 50px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+
+.speace-t-40 {
+    padding-top: 40px;
+
+    @include respond-between(md, lg) {
+        padding-top: 30px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 25px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-t-30 {
+    padding-top: 30px;
+
+    @include respond-between(md, lg) {
+        padding-top: 25px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 20px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 18px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+//bg-size
+.bg-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+}
+
+//html&body
+html, body{
+    height: 100%;
+    width: 100%;
+}
+//button
+.btn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+.btn-card{
+    @include fonts($main-font, 15, 400, $btn-card, capitalize, 26px);
+    background-color: $white-color;
+    @extend .transition;
+    padding: 5px 10px;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: $btn-card-hover;
+        color: inherit;
+    }
+}
+.btn-style{
+    @include fonts($main-font, 16, 500, $white-color, uppercase, 26px);
+    padding: 10px 20px;
+    @extend .transition;
+    background-color: $main-color;
+    border-radius: 4px;
+    border: 1px solid $main-color;
+    display: inline-block;
+
+    @include respond-between(sm, md) {
+  
+    }
+    @include respond-between(xs, sm) {
+        padding: 10px 15px;
+      
+    }
+    @include respond-below(xs) {
+        padding: 7px 12px;
+        font-size: 13px;
+      
+    }
+    
+    &:hover {
+        background-color: $btn-bg;
+        color: $white-color;
+        border-color: $btn-bg;
+    }
+}
+
+.loss-margin{
+    margin: -15px;
+}
+.div-margin{
+    margin: 15px;
+}

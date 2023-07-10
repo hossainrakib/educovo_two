@@ -1,0 +1,140 @@
+.newsletter-area{
+    margin-bottom: -96px;
+
+    @include respond-between(md, lg) {
+  
+    }
+    @include respond-between(sm, md) {
+      
+    }
+    @include respond-between(xs, sm) {
+        margin-bottom: 50px;
+      
+    }
+    @include respond-below(xs) {
+        margin-bottom: 35px;
+      
+    }
+    .newsletter{
+        background-color: $feature-bg;
+        padding: 60px 70px;
+        border-radius: 3px;
+
+        @include respond-between(md, lg) {
+  
+        }
+        @include respond-between(xs, md) {
+            padding: 40px 30px;
+          
+        }
+        @include respond-between(xs, sm) {
+          
+        }
+        @include respond-below(xs) {
+            padding: 20px;
+          
+        }
+        &__content{
+
+        }
+        &__icon{
+            max-width: 50px;
+            margin-right: 20px;
+            @include respond-below(sm) {
+                margin-right: 0px;
+  
+            }
+            @include respond-below(xs) {
+                max-width: 35px;
+  
+            }
+            img{
+            }
+        }
+        &__title{
+            h2{
+                @include fonts($second-font, 36, 700, $white-color, capitalize, 43px);
+
+                @include respond-between(md, lg) {
+  
+                }
+                @include respond-between(sm, md) {
+                  margin-top: 10px;
+                  font-size: 30px;
+                }
+                @include respond-between(xs, sm) {
+                  @include texts(26, 38);
+                  margin-top: 8px;
+
+                }
+                @include respond-below(xs) {
+                    @include texts(20, 30);
+                    margin-top: 5px;
+
+                  
+                }
+            }
+        }
+        &__form{
+            &__wrap{
+                .email{
+                    input{
+                        padding: 15px 25px;
+                        background-color: $white-bg;
+                        border: none;
+                        border-radius: 5px;
+                        @include fonts($main-font, 15, 400, $title-color, inherit, 26px);
+                        
+                        @include respond-between(md, lg) {
+  
+                        }
+                        @include respond-between(sm, md) {
+                            padding: 13px 25px;
+                          
+                        }
+                        @include respond-between(xs, sm) {
+                             padding: 11px 25px;
+                          
+                        }
+                        @include respond-below(xs) {
+                            padding: 8px 14px;
+                        }
+                        &::placeholder{
+                            @include fonts($main-font, 15, 400, $rating-color, capitalize, 26px);
+                            @include respond-below(xs) {
+                               font-size: 12px;
+                            }
+                        }
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                }
+                .submit{
+                    input[type="submit"] {
+                        @include fonts($main-font, 15, 400, $white-color, capitalize, 26px);
+                        padding: 0 40px;
+                        background-color: $main-color;
+                        border: none;
+
+                        @include respond-between(md, lg) {
+  
+                        }
+                        @include respond-between(sm, md) {
+                            padding: 0 34px;
+                          
+                        }
+                        @include respond-between(xs, sm) {
+                            padding: 0 28px;
+                          
+                        }
+                        @include respond-below(xs) {
+                            padding: 0 22px;
+                          
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

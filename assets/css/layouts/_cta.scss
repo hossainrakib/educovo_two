@@ -1,0 +1,115 @@
+.cta-area{
+    .cta{
+        padding: 125px 0;
+
+        @include respond-between(md, lg) {
+  
+        }
+        @include respond-between(sm, md) {
+          
+        }
+        @include respond-between(xs, sm) {
+            padding: 70px 0;
+          
+        }
+        @include respond-below(xs) {
+            padding: 60px 0;
+          
+        }
+        
+        &::before, &::after{
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            content: '';
+            width: 50%;
+            height: 100%;
+            top: 0;
+        }
+        &::before{
+            background-image: url(../../img/CTA/home1.jpg);
+            left: 0;
+            @include respond-below(md) {
+                background-image: inherit;
+            }
+        }
+        &::after{
+            background-image: url(../../img/CTA/main-home.jpg);
+            right: 0;
+            z-index: 0;
+            @include respond-below(md) {
+                width: 100%;
+            }
+        }
+        &__content{
+            padding-left: 70px;
+            z-index: 99;
+
+            @include respond-below(md) {
+                padding-left: 0;
+            }
+        }
+        &__title{
+            h2{
+                @include fonts($second-font, 36, 800, $white-color, capitalize, 46px);
+
+                @include respond-between(md, lg) {
+  
+                }
+                @include respond-between(sm, md) {
+                  
+                }
+                @include respond-between(xs, sm) {
+                  @include texts(32, 43);
+                }
+                @include respond-below(xs) {
+                    @include texts(25, 43);
+                  
+                }
+                
+            }
+        }
+        &__disc{
+            padding-right: 100px;
+            @include respond-below(md) {
+                padding-right: 0px;
+  
+            }
+            p{
+                @include fonts($main-font, 16, 400, $white-color, inherit, 26px);
+                margin: 15px 0 40px 0;
+
+                @include respond-below(xs) {
+                    margin: 10px 0 25px 0;
+  
+                }
+                
+            }
+        }
+        &__link{
+            a{
+                padding: 12px 35px;
+
+                @include respond-between(sm, md) {
+                    padding: 12px 32px;
+  
+                }
+                @include respond-between(xs, sm) {
+                    padding: 10px 30px;
+                  
+                }
+                @include respond-below(xs) {
+                    padding: 8px 25px;
+                  
+                }
+                
+                &:hover{
+                    color: $title-color;
+                    background-color: $white-bg;
+                    border-color: $white-color;
+                }
+            }
+        }
+    }
+}

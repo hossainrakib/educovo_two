@@ -1,0 +1,324 @@
+.footer-area{
+    background-color: $footer-bg;
+    .footer{
+
+        &__top{
+            padding: 220px 0 95px 0;
+
+            @include respond-between(md, lg) {
+  
+            }
+             @include respond-between(sm, md) {
+                padding: 180px 0 60px 0;
+              
+            }
+            @include respond-between(xs, sm) {
+                padding: 80px 0 40px 0;
+             
+            }
+            @include respond-below(xs) {
+                padding: 50px 0 20px 0;
+            }
+        }
+        &__logo{
+            a{
+                max-width: 190px;
+
+                @include respond-between(md, lg) {
+  
+                }
+                @include respond-between(sm, md) {
+                  
+                }
+                @include respond-between(xs, sm) {
+                  
+                }
+                @include respond-below(xs) {
+                  
+                }
+                img{
+
+                }
+            }
+        }
+        &__disc{
+            p{
+                @include fonts($main-font, 15, 400, $white-color, inherit, 27px);
+                margin: 30px 70px 25px 0;
+
+                @include respond-between(md, lg) {
+                    margin: 30px 40px 25px 0;
+  
+                }
+                @include respond-between(sm, md) {
+                    margin: 30px 0px 25px 0;
+                  
+                }
+                @include respond-between(xs, sm) {
+                    margin: 24px 0px 20px 0;
+                  
+                }
+                @include respond-below(xs) {
+                    margin: 26px 0px 30px 0;
+                  
+                }
+            }
+        }
+        &__social{
+            ul{
+                li{
+
+                    a{
+                        font-size: 16px;
+                        line-height: 16px;
+                        color: $white-color;
+                        margin-right: 16px;
+                        transition: all .3s ease-in-out;
+                        
+                        &:hover {
+                            color: $main-color;
+                        }
+                        i{
+                            
+                        }
+                    }
+                }
+            }
+        }
+        &__widget{
+            &__title{
+                h3{
+                    @include fonts($second-font, 18, 700, $white-color, uppercase, 26px);
+                    position: relative;
+                    margin-bottom: 35px;
+
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        width: 40px;
+                        height: 2px;
+                        background-color: $main-color;
+                        bottom: -5px;
+                        left: 0;
+                    }
+                }
+            }
+            &__address{
+                ul{
+                    li{
+                        margin-bottom: 16px;
+                        display: flex;
+
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        i{
+                           font-size: 15px;
+                           line-height: 26px;
+                           color: $main-color;
+                            
+                        }
+                        .disc{
+                            @include fonts($main-font, 15, 400, $white-color, inherit, 26px);
+                            margin-left: 15px;
+                            a{
+                                @include fonts($main-font, 15, 400, $white-color, inherit, 26px);
+                                @extend .transition;
+                                &:hover{
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.courses{
+                margin-left: 50px;
+
+                @include respond-between(md, lg) {
+  
+                }
+                @include respond-between(sm, md) {
+                  
+                }
+                @include respond-between(xs, sm) {
+                  
+                }
+                @include respond-below(md) {
+                  margin-left: 0;
+                }
+            }
+            &__courses{
+                ul{
+                    li{
+                        margin-bottom: 10px;
+
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        a{
+                            @include fonts($main-font, 15, 400, $copy-right-color, capitalize, 26px);
+                            position: relative;
+                            padding-left: 15px;
+                            @extend .transition;
+
+                            &::after{
+                                position: absolute;
+                                content: '';
+                                top: 50%;
+                                left: 0;
+                                transform: translateY(-50%);
+                                width: 6px;
+                                height: 6px;
+                                background-color: $main-color;
+
+                            }
+
+                            &:hover{
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+            }
+            &__post{
+                ul{
+                    li{
+                        margin-bottom: 20px;
+
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        .recent-post{
+                            &__image{
+                                width: 83px;
+
+                                @include respond-between(lg, xl) {
+                                     width: 70px;
+                                    
+  
+                                }
+                                @include respond-between(md, lg) {
+                                    
+  
+                                }
+                                @include respond-between(sm, md) {
+                                  
+                                }
+                                @include respond-between(xs, sm) {
+                                  
+                                }
+                                @include respond-below(xs) {
+                                    width: 70px;
+                                    
+                                  
+                                }
+                                img{
+
+                                }
+                            }
+                            &__content{
+                                margin-left: 15px;
+                            }
+                            &__disc{
+                                p{
+                                    @include fonts($main-font, 14, 400, $white-color, capitalize, 24px);
+                                    @extend .transition;
+
+                                    @include respond-between(md, lg) {
+                                        @include texts(13, 20)
+      
+                                    }
+                                    
+
+                                    &:hover{
+                                        color: $main-color;
+                                    }
+                                }
+                            }
+                            &__date{
+                                i{
+                                    @include texts(13, 13);
+                                    color: $main-color;
+                                    margin-right: 5px
+                                }
+                                span.date{
+                                    @include fonts($main-font, 13, 400, $white-color, capitalize, 26px);
+
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        &__bottom{
+            height: 107px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+            @include respond-between(md, lg) {
+  
+            }
+            @include respond-between(sm, md) {
+              
+            }
+            @include respond-between(xs, sm) {
+                height: 90px;  
+              
+            }
+            @include respond-below(xs) {
+                height: 80px;  
+              
+            }
+        }
+        &__copy-right{
+            p{
+                @include fonts($main-font, 15, 400, $copy-right-color, capitalize, 27px);
+
+                @include respond-below(xs) {
+                    @include texts (10, 30)
+                }
+                span{
+                    @extend .transition;
+
+                    &:hover{
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+        &__menu{
+            ul{
+                li{
+                    &:first-child a::after{
+                        position: static;
+                    }
+                    a{
+                        @include fonts($main-font, 14, 400, $footer-menu-color, capitalize, 26px);
+                        @extend .transition;
+                        display: block;
+                        padding: 0 19px 0 25px;
+                        position: relative;
+
+                        &::after{
+                            position: absolute;
+                            content: '';
+                            width: 6px;
+                            height: 6px;
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
+                            background-color: $main-color;
+                            border-radius: 50%;
+                        }
+
+                        &:hover{
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
